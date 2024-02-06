@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Calculator",
+      "subtitle": "J.R.R. Tolkien",
+      "link": "link here",
+      "codelink": "codelink",
+      "favor": false,
+      "description": "An unexpected journey of a vertically challenged homebody and his overly enthusiastic band of treasure-hungry dwarves, featuring a cameo appearance by a gold-obsessed dragon."
+    },
+    {
+      "title": "It",
+      "subtitle": "Stephen King",
+      "link": "link here",
+      "codelink": "codelink",
+      "favor": false,
+      "description": "A clown with a face only a mother could love terrorizes a town, proving that sometimes balloons aren't just for birthday parties."
+    },
+    {
+      "title": "Leviathan Wakes",
+      "subtitle": "James S.A. Corey",
+      "link": "link here",
+      "codelink": "codelink",
+      "favor": false,
+      "description": "When a space detective and a washed-up ship captain team up to solve a mystery, they discover that space zombies and interstellar politics make for one wild ride through the cosmos."
+    }
+]
+  
