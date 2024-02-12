@@ -1,10 +1,48 @@
 :root {
-    --accent-bgcolor: #1C6EA4;
-    --accent-color: #1C6EA4;
-    --content-color: lightcyan;
-    --divcards-color: #fff;
+    --accent-bgcolor: #0F3460;
+    --accent-color: #533483;
+    --content-color: #16213E;
+    --accent-highlight: #E94560;
+    --divcards-color: #0F3460;
     --font-family: fantasy;
+    --font-color: white;
+}
 
+body {
+    background-color: var(--content-color); 
+    margin: 0; 
+    color: var(--font-color);
+}
+
+.container {
+    max-width: 1240px; 
+    min-width: 640px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 60px;
+    padding: 32px;
+    border: 5px solid var(--accent-highlight);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: var(--accent-bgcolor);
+    color: var(--font-color);
+    text-align: center;
+    padding: 20px 0;
+    position: bottom;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+article {
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    margin-bottom: 0;
 }
 
 .navbar {
@@ -17,22 +55,6 @@
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Ensure the navbar stays on top of other content */
-}
-
-header {
-    padding-top: 60px; /* Adjust this value to match the height of your navbar */
-    /* Other styles for your content */
-}
-
-footer {
-    background-color: var(--accent-bgcolor);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 .navbar a {
@@ -61,20 +83,29 @@ footer {
 
 .project-cards > div {
     background-color: var(--divcards-color);
-    border-radius: 0px 8px 8px 0px;
+    border-radius: 8px 8px 8px 8px;
     box-sizing: border-box;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
     height: 200px;
     width: 300px;
     padding: 16px;
-    border-top: 5px solid var(--accent-color);
+    border-top: 16px solid var(--accent-color);
     opacity: .8;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 1fr 2fr;
+    transition: box-shadow 0.8s, border-top-color 0.8s;
 }
 
 .project-cards > div:hover {
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
-    border-top: 5px solid blue;
-    transition: box-shadow 0.8s, border-left-color 0.8s;
+    box-shadow: 24px 24px 24px rgba(0,0,0,0.5);
+    border-top: 16px solid var(--accent-highlight);
+    transition: box-shadow 0.8s, border-top-color 0.8s;
+}
+
+.project-cards > div:leave {
+    box-shadow: 24px 24px 24px rgba(0,0,0,0.5);
+    transition: box-shadow 0.8s, border-top-color 0.8s;
 }
 
 .image-button {
@@ -86,16 +117,35 @@ footer {
     background-color: var(--divcards-color);
 }
 
-.fav-button {
-    background-image: url("/images/star-plus-outline.svg"); 
+.project-actions {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    gap: 12px
+}
+
+.fav-button-false {
+    background-image: url("/images/star-plus-outline.svg");
+    transition: background-image 0.5s;
+}
+
+.fav-button-true {
+    background-image: url("/images/star-check.svg");
+    transition: background-image 0.5s;
 }
 
 .view-code-button {
     background-image: url("/images/code-block-braces.svg");
 }
 
+.view-page-button {
+    background-image: url("/images/eye-arrow-left-outline.svg");
+}
+
 .description div {
     opacity: .9;
+    display: grid;
+
     background-color: var(--divcards-color);
     border-radius: 8px 8px 8px 8px;
     box-sizing: border-box;

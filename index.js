@@ -1,7 +1,7 @@
 //Project Cards and links
-function Project(title, subtitle, link, codelink, favor, description) {
+function Project(title, language, link, codelink, favor, description) {
     this.title = title;
-    this.subtitle = subtitle;
+    this.language = language;
     this.description = description;
     this.link = link;
     this.codelink = codelink
@@ -22,7 +22,7 @@ function getData() {
         })
         .then(data => {
             data.forEach(item => {
-                const project = new Project(item.title, item.subtitle, item.link, item.codelink, item.favor, item.description);
+                const project = new Project(item.title, item.language, item.link, item.codelink, item.favor, item.description);
                 myLibrary.push(project);
             });
             console.log(myLibrary); // This will log the populated array
@@ -43,38 +43,54 @@ function displayProjects() {
 
     // Loop through the library array and create Projectcard divs
     myLibrary.forEach(project => {
-        // Create a new projectcard div
+        // Create a new project card div
         const projectCardDiv = document.createElement('div');
 
-        // Create elements for project title, author
-        const title = document.createElement('h2');
+        // Create elements for project title, languages
+        const title = document.createElement('article');
         title.textContent = project.title;
 
-        const subtitle = document.createElement('p');
-        subtitle.textContent = `by ${project.subtitle}`;
+        const language = document.createElement('p');
+        language.textContent = project.language;
 
         const actions = document.createElement('div');
+        actions.classList = 'project-actions';
 
         const favBtn = document.createElement('button');
-        favBtn.classList = 'image-button fav-button';
+        favBtn.classList = 'image-button fav-button-false';
         favBtn.addEventListener('click', () =>  {
             // temporary
-            alert("Favorited!");
+            if (project.favor === false) {
+                project.favor = true;
+                favBtn.classList = 'image-button fav-button-true';
+            } else {
+                project.favor = false;
+                favBtn.classList = 'image-button fav-button-false';
+            }
         })
         actions.appendChild(favBtn)
 
         const viewCodeBtn = document.createElement('button')
         viewCodeBtn.classList = 'image-button view-code-button';
         viewCodeBtn.addEventListener('click', () =>  {
-            // temporary
-            alert("Link to code!");
+            // link to project code on github
+            window.open(project.codelink, "_blank");
         })
         actions.appendChild(viewCodeBtn)
 
+        const viewPageBtn = document.createElement('button')
+        viewPageBtn.classList = 'image-button view-page-button';
+        viewPageBtn.addEventListener('click', () =>  {
+            // link to project page preview
+            window.open(project.link, "_blank");
+        })
+        actions.appendChild(viewPageBtn)
+
         // Append elements to the project div
         projectCardDiv.appendChild(title);
-        projectCardDiv.appendChild(subtitle);
         projectCardDiv.appendChild(actions);
+        projectCardDiv.appendChild(language);
+
 
         // Add event listener for mouseover event
         projectCardDiv.addEventListener('mouseover', () => {

@@ -5,43 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my Portfolio!</title>
 <link rel="stylesheet" href="index-style.css">
+<script src="index.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
+        <!-- Content -->
+        <header class="hero">
+            <h1>Welcome to my website</h1>
+            <p>This is some sample content below the fixed navbar.</p>
+            <p>You can add more content here.</p>
+        </header>
+        <div class="content portfolio">
+            <div class="box1">
+                <h2>Project Portfolio</h2>
+                <div class="project-cards"></div>
+            </div>
+            <div class="box2">
+                <h2>Description</h2>
+                <div class="description"></div>
+            </div>
+        <div class="content about"></div>
+            <div class="box3">
+                <h3>About</h3>
+                <div class="otherbooks"></div>
+            </div>
+        </div>
+        <div class="footer">
 
-    <!-- Content -->
-    <header>
-        <h1>Welcome to my website</h1>
-        <p>This is some sample content below the fixed navbar.</p>
-        <p>You can add more content here.</p>
-    </header>
-    <div class="content portfolio">
-        <div class="box1">
-            <h2>Project Portfolio</h2>
-            <div class="project-cards"></div>
-        </div>
-        <div class="box2">
-            <h2>Description</h2>
-            <div class="description"></div>
-        </div>
-    <div class="content about"></div>
-        <div class="box3">
-            <h3>About</h3>
-            <div class="otherbooks"></div>
-        </div>
+        <footer>
+            &copy; 2024 Gregory Jung
+        </footer>
     </div>
-    <div class="footer">
-
-    <footer>
-        &copy; 2024 Gregory Jung
-    </footer>
-    <script src="index.js"></script>
+    
 </body>
 </html>
