@@ -1,7 +1,7 @@
 :root {
     --accent-bgcolor: #0F3460;
     --accent-color: #533483;
-    --content-color: #16213E;
+    --content-color: black;
     --accent-highlight: #E94560;
     --divcards-color: #0F3460;
     --font-family: fantasy;
@@ -15,14 +15,30 @@ body {
 }
 
 .container {
-    max-width: 1240px; 
+    max-width: 1000px; 
     min-width: 640px;
     width: 90%;
     margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://backiee.com/static/wpdb/wallpapers/v2/3840x2160/346787.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 header {
     margin-top: 60px;
+    margin-bottom: 60px;
     padding: 32px;
     border: 5px solid var(--accent-highlight);
     border-radius: 20px;
@@ -33,8 +49,8 @@ footer {
     background-color: var(--accent-bgcolor);
     color: var(--font-color);
     text-align: center;
-    padding: 20px 0;
-    position: bottom;
+    padding: 5px 0;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -54,7 +70,7 @@ article {
     color: #fff;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure the navbar stays on top of other content */
+    z-index: 1000;
 }
 
 .navbar a {
@@ -64,13 +80,9 @@ article {
 }
 
 .content {
-    background-color: var(--content-color);
     display: grid;
-    grid-template-columns: 2fr 250px;
-}
+    grid-template-columns: 3fr;
 
-.box1 {
-    grid-row: 1 / 3
 }
 
 .project-cards {
@@ -109,11 +121,11 @@ article {
 }
 
 .image-button {
-    width: 30px; /* Set the width of the button */
-    height: 30px; /* Set the height of the button */
-    border: none; /* Remove button border */
-    background-size: cover; /* Cover the entire button with the background image */
-    cursor: pointer; /* Set cursor to pointer on hover */
+    width: 30px; 
+    height: 30px;
+    border: none;
+    background-size: cover;
+    cursor: pointer;
     background-color: var(--divcards-color);
 }
 
@@ -145,7 +157,6 @@ article {
 .description div {
     opacity: .9;
     display: grid;
-
     background-color: var(--divcards-color);
     border-radius: 8px 8px 8px 8px;
     box-sizing: border-box;
