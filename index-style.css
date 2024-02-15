@@ -137,21 +137,21 @@ article {
 }
 
 .fav-button-false {
-    background-image: url("/images/star-plus-outline.svg");
+    background-image: url("images/star-plus-outline.svg");
     transition: background-image 0.5s;
 }
 
 .fav-button-true {
-    background-image: url("/images/star-check.svg");
+    background-image: url("images/star-check.svg");
     transition: background-image 0.5s;
 }
 
 .view-code-button {
-    background-image: url("/images/code-block-braces.svg");
+    background-image: url("images/code-block-braces.svg");
 }
 
 .view-page-button {
-    background-image: url("/images/eye-arrow-left-outline.svg");
+    background-image: url("images/eye-arrow-left-outline.svg");
 }
 
 .description div {
