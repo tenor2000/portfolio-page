@@ -43,6 +43,8 @@ header {
     border: 5px solid var(--accent-highlight);
     border-radius: 20px;
     box-sizing: border-box;
+    background-color: var(--accent-bgcolor);
+    opacity: .7;
 }
 
 footer {
@@ -50,7 +52,7 @@ footer {
     color: var(--font-color);
     text-align: center;
     padding: 5px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -155,13 +157,21 @@ article {
 }
 
 .description div {
-    opacity: .9;
+    opacity: .7;
     display: grid;
     background-color: var(--divcards-color);
     border-radius: 8px 8px 8px 8px;
     box-sizing: border-box;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px rgba(255,255,255,0.5);
     padding: 16px;
     margin-right: 32px;
     /* transition: box-shadow 0.8s, border-left-color 0.8s; */
+}
+
+.about {
+    padding: 20px;
+    background-color: var(--accent-bgcolor);
+    opacity: .7;
+    border-radius: 8px;
+    margin-top: 20px;
 }

@@ -25,8 +25,7 @@ function getData() {
                 const project = new Project(item.title, item.language, item.link, item.codelink, item.favor, item.description);
                 myLibrary.push(project);
             });
-            console.log(myLibrary); // This will log the populated array
-            // Call any function that relies on the populated myLibrary array here
+            console.log(myLibrary);
             displayProjects();
         })
         .catch(error => {
@@ -120,10 +119,48 @@ function clearDescription() {
     descriptionbox.innerHTML = '';
 }
 
-getData();
+document.addEventListener("DOMContentLoaded", function() {
+    var aboutDiv = document.querySelector(".about");
+    aboutDiv.innerHTML = `
+        <p>My journey into software development stems from my time at Edison Research, where I took it upon myself to develop Python-based automation project for handling paper surveys, revolutionizing survey data entry processes and optimizing team efficiency. As a project coordinator, I navigated high-pressure environments with ease, recruiting and leading diverse teams of reporters for critical election day coverage (we provided election data to the major news networks), all while enhancing internal software functionality across multiple languages.</p>
+        <p>Prior to my foray into tech, I spent years honing my craft as a choral music teacher, leveraging technology to create dynamic, student-centered learning environments. From integrating classroom tech to securing grants for music labs, I've always been at the forefront of educational innovation.</p>
+        <p>Equipped with certificates in web development, data science, and SQL, alongside a Master's in Music Education from Rutgers University, I bring a unique blend of technical prowess and pedagogical expertise to the table.</p>
+        <p>Through this portfolio, I invite you to explore the intersection of my diverse experiences and my unwavering passion for software development. From automating tedious tasks to orchestrating superior performances, each endeavor speaks to my commitment to excellence and innovation.</p>
+        <p>So come on in, take a look around, and let's embark on this exciting journey together!</p>
+    `;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var heroHeader = document.getElementById("hero");
+    heroHeader.innerHTML = `
+        <h1>Welcome to My Portfolio website</h1>
+        <p>Hello and welcome! My name is Gregory Jung, an adaptable, music educator turned aspiring software developer on a mission to blend my passion for technology with a knack for creativity in problem solving. With a solid foundation in Python, JavaScript, PHP, and SQL, alongside a fervent pursuit of web development through The Odin Project, I'm poised to make meaningful contributions in the world of software engineering.</p>
+    `;
+});
 
 window.addEventListener('scroll', function() {
     let scrolled = window.scrollY;
     let parallax = document.querySelector('.parallax');
     parallax.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const heroHeader = document.getElementById("hero");
+    heroHeader.innerHTML = `
+        <h1>Welcome to My Portfolio website</h1>
+        <p>Hello and welcome! My name is Gregory Jung, an adaptable, music educator turned aspiring software developer on a mission to blend my passion for technology with a knack for creativity in problem solving. With a solid foundation in Python, JavaScript, PHP, and SQL, alongside a fervent pursuit of web development through The Odin Project, I'm poised to make meaningful contributions in the world of software engineering.</p>
+    `;
+
+    const aboutDiv = document.querySelector(".about");
+    aboutDiv.innerHTML = `
+        <p>My journey into software development stems from my time at Edison Research, where I took it upon myself to develop Python-based automation project for handling paper surveys, revolutionizing survey data entry processes and optimizing team efficiency. As a project coordinator, I navigated high-pressure environments with ease, recruiting and leading diverse teams of reporters for critical election day coverage (we provided election data to the major news networks), all while enhancing internal software functionality across multiple languages.</p>
+        <p>Prior to my foray into tech, I spent years honing my craft as a choral music teacher, leveraging technology to create dynamic, student-centered learning environments. From integrating classroom tech to securing grants for music labs, I've always been at the forefront of educational innovation.</p>
+        <p>Equipped with certificates in web development, data science, and SQL, alongside a Master's in Music Education from Rutgers University, I bring a unique blend of technical prowess and pedagogical expertise to the table.</p>
+        <p>Through this portfolio, I invite you to explore the intersection of my diverse experiences and my unwavering passion for software development. From automating tedious tasks to orchestrating superior performances, each endeavor speaks to my commitment to excellence and innovation.</p>
+        <p>So come on in, take a look around, and let's embark on this exciting journey together!</p>
+    `;
+
+    getData();
+});
+
+
