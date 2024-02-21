@@ -1,177 +1,182 @@
 :root {
-    --accent-bgcolor: #0F3460;
-    --accent-color: #533483;
-    --content-color: black;
-    --accent-highlight: #E94560;
-    --divcards-color: #0F3460;
-    --font-family: fantasy;
-    --font-color: white;
+  --accent-bgcolor: #0f3460;
+  --accent-color: #533483;
+  --content-color: black;
+  --accent-highlight: #e94560;
+  --divcards-color: #0f3460;
+  --font-family: fantasy;
+  --font-color: white;
 }
 
 body {
-    background-color: var(--content-color); 
-    margin: 0; 
-    color: var(--font-color);
+  background-color: var(--content-color);
+  margin: 0;
+  color: var(--font-color);
 }
 
 .container {
-    max-width: 1000px; 
-    min-width: 640px;
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
+  max-width: 1000px;
+  min-width: 640px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .parallax {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://backiee.com/static/wpdb/wallpapers/v2/3840x2160/346787.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://backiee.com/static/wpdb/wallpapers/v2/3840x2160/346787.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 header {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    padding: 32px;
-    border: 5px solid var(--accent-highlight);
-    border-radius: 20px;
-    box-sizing: border-box;
-    background-color: var(--accent-bgcolor);
-    opacity: .7;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 32px;
+  border: 5px solid var(--accent-highlight);
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: var(--accent-bgcolor);
+  opacity: 0.7;
 }
 
 footer {
-    background-color: var(--accent-bgcolor);
-    color: var(--font-color);
-    text-align: center;
-    padding: 5px 0;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background-color: var(--accent-bgcolor);
+  color: var(--font-color);
+  text-align: center;
+  padding: 5px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 article {
-    font-size: clamp(1.6rem, 2vw, 2rem);
-    margin-bottom: 0;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  margin-bottom: 0;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--accent-bgcolor);
-    color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--accent-bgcolor);
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .navbar a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: 3fr;
-
+  display: grid;
+  grid-template-columns: 3fr;
 }
 
 .project-cards {
-    display: grid;
-    width: 2fr;
-    grid-template-columns: repeat(auto-fit, 300px);
-    gap: 16px;
-    margin: 32px
+  display: grid;
+  width: 2fr;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 16px;
+  margin: 32px;
 }
 
 .project-cards > div {
-    background-color: var(--divcards-color);
-    border-radius: 8px 8px 8px 8px;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-    height: 200px;
-    width: 300px;
-    padding: 16px;
-    border-top: 16px solid var(--accent-color);
-    opacity: .8;
-    display: grid;
-    grid-template-columns: 1fr 30px;
-    grid-template-rows: 1fr 2fr;
-    transition: box-shadow 0.8s, border-top-color 0.8s;
+  background-color: var(--divcards-color);
+  border-radius: 8px 8px 8px 8px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  height: 200px;
+  width: 300px;
+  padding: 16px;
+  border-top: 16px solid var(--accent-color);
+  opacity: 0.8;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  grid-template-rows: 1fr 2fr;
+  transition:
+    box-shadow 0.8s,
+    border-top-color 0.8s;
 }
 
 .project-cards > div:hover {
-    box-shadow: 24px 24px 24px rgba(0,0,0,0.5);
-    border-top: 16px solid var(--accent-highlight);
-    transition: box-shadow 0.8s, border-top-color 0.8s;
+  box-shadow: 24px 24px 24px rgba(0, 0, 0, 0.5);
+  border-top: 16px solid var(--accent-highlight);
+  transition:
+    box-shadow 0.8s,
+    border-top-color 0.8s;
 }
 
 .project-cards > div:leave {
-    box-shadow: 24px 24px 24px rgba(0,0,0,0.5);
-    transition: box-shadow 0.8s, border-top-color 0.8s;
+  box-shadow: 24px 24px 24px rgba(0, 0, 0, 0.5);
+  transition:
+    box-shadow 0.8s,
+    border-top-color 0.8s;
 }
 
 .image-button {
-    width: 30px; 
-    height: 30px;
-    border: none;
-    background-size: cover;
-    cursor: pointer;
-    background-color: var(--divcards-color);
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-size: cover;
+  cursor: pointer;
+  background-color: var(--divcards-color);
 }
 
 .project-actions {
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 1/3;
-    gap: 12px
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  gap: 12px;
 }
 
 .fav-button-false {
-    background-image: url("images/star-plus-outline.svg");
-    transition: background-image 0.5s;
+  background-image: url("images/star-plus-outline.svg");
+  transition: background-image 0.5s;
 }
 
 .fav-button-true {
-    background-image: url("images/star-check.svg");
-    transition: background-image 0.5s;
+  background-image: url("images/star-check.svg");
+  transition: background-image 0.5s;
 }
 
 .view-code-button {
-    background-image: url("images/code-block-braces.svg");
+  background-image: url("images/code-block-braces.svg");
 }
 
 .view-page-button {
-    background-image: url("images/eye-arrow-left-outline.svg");
+  background-image: url("images/eye-arrow-left-outline.svg");
 }
 
 .description div {
-    opacity: .7;
-    display: grid;
-    background-color: var(--divcards-color);
-    border-radius: 8px 8px 8px 8px;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 10px rgba(255,255,255,0.5);
-    padding: 16px;
-    margin-right: 32px;
-    /* transition: box-shadow 0.8s, border-left-color 0.8s; */
+  opacity: 0.7;
+  display: grid;
+  background-color: var(--divcards-color);
+  border-radius: 8px 8px 8px 8px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+  padding: 16px;
+  margin-right: 32px;
+  /* transition: box-shadow 0.8s, border-left-color 0.8s; */
 }
 
 .about {
-    padding: 20px;
-    background-color: var(--accent-bgcolor);
-    opacity: .7;
-    border-radius: 8px;
-    margin-top: 20px;
+  padding: 20px;
+  background-color: var(--accent-bgcolor);
+  opacity: 0.7;
+  border-radius: 8px;
+  margin-top: 20px;
 }
