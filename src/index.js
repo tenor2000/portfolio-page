@@ -1,4 +1,6 @@
-//Project Cards and links
+import _ from 'lodash'
+
+// Project Cards and links
 function Project(title, language, link, codelink, favor, description) {
   this.title = title;
   this.language = language;
@@ -7,7 +9,7 @@ function Project(title, language, link, codelink, favor, description) {
   this.codelink = codelink;
   this.favor = favor;
   this.info = function () {
-    return `${title} by ${author}, ${pages} pages`;
+    return `${title}: ${description}`;
   };
 }
 
